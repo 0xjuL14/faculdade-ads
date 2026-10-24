@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+        <title>nome guia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header class="cabeçalho">Inscrição para Evento de Tecnologia</header>
+<main>
+    <section class="container">container</section>
+    <form action="/servidor" method="post"> <!-- formulário GET = MOSTRA TUDO NA URL | POST = "OCULTA" -->
+        <label for="nome">Nome</label>
+        <input required id="nome" name="nome" id="nome" minlength="3" maxlength="60">
+
+        <label for="email">E-mail</label>
+        <input required type="email" name="email" id="email" placeholder="usuario@teste.com">
+
+        <label for="tel">Telefone</label>
+        <input required id="tel" name="tel" id="tel" pattern="[0-9]{10,11}">
+
+        <label for="date">Data de Nascimento</label>
+        <input required type="date" id="date" name="date" id="date">
+        <select required>
+            <option value="">Selecione uma área...</option>
+            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+            <option value="Aplicativos Mobile">Aplicativos Mobile</option>
+            <option value="Inteligência Artificial">Inteligência Artificial</option>
+            <option value="Cybersegurança">Cybersegurança</option>
+            <option value="Banco de Dados">Banco de Dados</option>
+        </select>
+
+        <label for="radio">Nível de Conhecimento:</label>
+        <input type="radio" name="nivel_conhecimento" value="iniciante"> Iniciante
+        <input type="radio" name="nivel_conhecimento" value="intermediario"> Intermediário
+        <input type="radio" name="nivel_conhecimento" value="avancado"> Avançado
+
+        <label for="checkbox">Escolha uma ou mais Linguagens:</label>
+        <input type="checkbox" name="lang"> HTML/CSS
+        <input type="checkbox" name="lang"> JavaScript
+        <input type="checkbox" name="lang"> React
+        <input type="checkbox" name="lang"> PHP
+        <input type="checkbox" name="lang"> Python
+        
+        <textarea placeholder="O que você espera aprender no evento?" rows="5" maxlength="300"></textarea>
+        
+        <input type="checkbox" name="termos" required> Li e aceito os termos de participação!
+        
+        <button type="submit">Enviar Inscrição!</button>
+        <button type="reset">Limpar Formulário...</button>
+
+    </form>
+</main>
+</body>
+<footer class="rodape">Feito por 0xjuL14</footer>
+</html>

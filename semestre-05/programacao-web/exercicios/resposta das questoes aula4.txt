@@ -1,0 +1,88 @@
+1 e 2)
+flex-direction: row; ficam um ao lado do outro
+flex-direction: column; ficam um abaixo do outro
+row-reverse em linha reta, de trás para frente
+column-reverse um abaixo do outro, porém do último para o primeiro
+
+3) 
+justify-content: center;
+
+4) feito
+
+5) gap cria entre uma caixa e outra
+
+6) flex-wrap: wrap; delimita as caixas verdes para o tamanho da caixa azul modificando as caixas verdes em colunas dentro da caixa azul 
+
+7) repeat(n, 1fr) é ótimo para muitas colunas, onde n é o número de colunas
+
+8) 2fr 1fr aumenta proporcionalmente 2x1
+
+9) O "destaque" fica em cima proporcional com as 3 colunas abaixo
+
+10)
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <title></title>
+    </head>
+     <body>
+     <div class="layout">
+  <header class="cabecalho">Cabeçalho</header>
+  <nav class="menu">Menu</nav>
+  <main class="conteudo">Conteúdo principal</main>
+  <aside class="conteudo">conteudo</aside>
+  <footer class="rodape">Rodapé</footer>
+</div>
+        
+    </body>
+</html>
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-areas:
+    "header header header"
+    "menu conteudo conteudo"
+    "footer footer footer";
+  gap: 10px;
+  padding: 15px;
+  background-color: #e2e8f0;
+  border: 4px solid #334155;
+}
+
+.cabecalho {
+  grid-area: header;
+  padding: 30px;
+  background-color: #60a5fa;
+  border: 3px solid #1d4ed8;
+}
+
+.menu {
+  grid-area: menu;
+  padding: 30px;
+  background-color: #86efac;
+  border: 3px solid #16a34a;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  padding: 30px;
+  background-color: #fde68a;
+  border: 3px solid #d97706;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 30px;
+  background-color: #c4b5fd;
+  border: 3px solid #7e22ce;
+}
+
+.rodape {
+  grid-area: footer;
+  padding: 30px;
+  background-color: #fda4af;
+  border: 3px solid #e11d48;
+}

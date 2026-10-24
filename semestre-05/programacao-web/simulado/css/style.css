@@ -1,0 +1,256 @@
+/* cores
+   Royal Purple .. #571B89
+   Indigo ........ #490968
+   Obsidian ...... #130420
+   Deep Purple ... #6F2EA8
+   Midnight Blue . #2C0548
+   Fundo da página: #000000 | Texto: #FFFFFF
+*/
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  background-color: #000000;
+  line-height: 1.5;
+}
+
+h1, h2, h3, .logo {
+  font-family: Georgia, serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section.container {
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 24px;
+}
+
+header { /* cabeçalho flexbox */
+  background-color: #130420;
+  color: #FFFFFF;
+  padding: 18px 0;
+  border-bottom: 2px solid #6F2EA8;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #6F2EA8;
+}
+
+.banner {
+  background-color: #571B89;
+  padding: 80px 0;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin: 0 0 16px;
+  max-width: 700px;
+}
+
+.banner p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 0 28px;
+}
+
+
+.botao { /* links como botão */
+  display: inline-block;
+  background-color: #130420;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 14px 24px;
+  border: 2px solid #FFFFFF;
+  border-radius: 6px;
+}
+
+.botao:hover {
+  background-color: #FFFFFF;
+  color: #130420;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.servico {
+  background-color: #2C0548;
+  padding: 24px;
+  border: 2px solid #6F2EA8;
+  border-radius: 8px;
+}
+
+.servico h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.servico p {
+  margin: 0 0 12px;
+}
+
+.preco {
+  display: inline-block;
+  background-color: #571B89;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+.form-grid { /* formulário */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #2C0548;
+  padding: 28px;
+  border: 2px solid #6F2EA8;
+  border-radius: 8px;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #6F2EA8;
+  border-radius: 5px;
+  background-color: #130420;
+  color: #FFFFFF;
+}
+
+input:focus, select:focus {
+  border-color: #FFFFFF;
+  outline: none;
+  box-shadow: 0 0 0 3px #6F2EA8;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #6F2EA8;
+  border: none;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: #130420;
+  cursor: pointer;
+}
+
+.resultado {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: #490968;
+  border-left: 6px solid #FFFFFF;
+  border-radius: 8px;
+}
+
+.resultado h3 {
+  margin: 0 0 12px;
+}
+
+.resultado p {
+  margin: 4px 0;
+}
+
+.total {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #130420;
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+footer { /* rodapé */
+  background-color: #130420;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 28px 20px;
+  border-top: 2px solid #6F2EA8;
+}
+
+footer p {
+  margin: 4px 0;
+}
+
+/* responsividade, media queries */
+@media (max-width: 768px) {
+  .topo {
+    flex-direction: column;
+  }
+
+  .banner {
+    padding: 48px 0;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

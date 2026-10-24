@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>InfraJubs Assistência Técnica</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<header class="cabecalho">
+    <div class="logo">
+        <h1>InfraJubs</h1>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Orçamentos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="container">
+        <article class="card destaque">
+            <h3>Serviço de Infraestrutura de T.I completo!</h3>
+            <p>Nossa área de destaque para soluções empresariais.</p>
+        </article>
+        <article class="card">
+            <h3>Suporte Redes</h3>
+            <p>Organização e estruturação de redes de internet.</p>
+        </article>
+        <article class="card">
+            <h3>Suporte Cloud</h3>
+            <p>Infraestrutura segura na nuvem.</p>
+        </article>
+        <article class="card">
+            <h3>Segurança Digital</h3>
+            <p>Proteção de dados e de redes.</p>
+        </article>
+        <article class="card">
+            <h3>Soluções em hardware para Servidores</h3>
+            <p>Peças de qualidade e confiáveis.</p>
+        </article>
+
+    </section>
+            <form id="form"action="/servidor" method="post"> <!-- formulário GET = MOSTRA TUDO NA URL | POST = "OCULTA" -->
+            <label for="nome">Nome</label>
+            <input required id="nome" name="nome" id="nome" minlength="3" maxlength="60">
+
+            <label for="email">E-mail</label>
+            <input required type="email" name="email" id="email" placeholder="usuario@teste.com">
+
+            <label for="servico">Serviço(s) Desejado(s):</label>
+            <input type="checkbox" name="servico"> Suporte em Redes
+            <input type="checkbox" name="servico"> Suporte em Cloud
+            <input type="checkbox" name="servico"> Segurança Digital
+            <input type="checkbox" name="servico"> Soluções em hardware para Servidores
+
+            <input type="number" id="quantidade" placeholder="quantidade" min="1">
+
+            <textarea placeholder="Informações adicionais" rows="5" maxlength="300"></textarea>
+
+            <label for="radio">Deseja receber nossa newsletter por E-mail?</label>
+            <input type="radio" name="newsletter" value="sim"> Sim!
+            <input type="radio" name="newsletter" value="nao"> Não.
+            
+            <button type="submit">Calcular!</button>
+        </form>
+</main>
+
+<footer class="rodape">
+    <p> 2026 InfraJubs - Todos os direitos reservados. Criado por: 0xjuL14</p>
+</footer>
+    <script src="/JS/script.js" defer></script> <!-- chama o javascript-->
+</body>
+</html>

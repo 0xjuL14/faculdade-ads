@@ -1,0 +1,45 @@
+Exercício 1 — Complete o código
+Complete as partes indicadas para criar uma área de perfil com imagem e conteúdo ao lado.
+
+<main class="perfil">
+  <aside class="avatar">
+    <img src="imagens/perfil.jpg" alt="foto de perfil">
+    <h2>Ana Silva</h2>
+    <a href="https://www.instagram.com" target="_blank">Instagram</a>
+  </aside>
+
+  <section class="sobre">
+    <h1>Meu Perfil</h1>
+    <p>Estou aprendendo HTML e CSS.</p>
+  </section>
+</main>
+Depois, complete o CSS:
+
+.avatar {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+Responda:
+
+Qual propriedade CSS coloca as áreas uma ao lado da outra? Flexbox
+Para que serve o atributo alt da imagem? Para acessibilidade, o texto lido e mostrado se a imagem falhar
+Qual é a função das tags <aside> e <section> nesse exemplo? <aside> é para o perfil lateral, contendo a foto. <section> possui o conteúdo de texto do perfil
+
+Exercício 2 — Meu Perfil Completo
+Crie uma página chamada “Meu Perfil Completo”, utilizando os arquivos index.html e style.css.
+
+A página deve conter:
+
+Um <header> com o nome do site;
+Um <main class="container">;
+Uma área lateral com <aside>, foto/avatar, nome e link;
+Uma área principal com <section>, apresentação e lista de hobbies;
+Uma tabela com pelo menos três linhas: rotina semanal, filmes favoritos, jogos, disciplinas ou séries;
+Um <footer> com seu nome e o ano atual;
+Uma imagem com atributo alt;
+Arquivo CSS externo conectado corretamente;
+Layout com duas áreas usando display: flex;
+Espaçamento usando gap;
+Imagem arredondada;
+Tabela com bordas e cabeçalho colorido.

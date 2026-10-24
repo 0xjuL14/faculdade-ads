@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Exercícios de JavaScript!</title>
+</head>
+<body>
+<main>
+    <h1>Exercícios de JavaScript</h1>
+    <p class="dica">Abra o console do navegador (F12 → Console) para ver os <code>console.log</code> dos exercícios 5, 6 e 7. As saídas também aparecem na página.</p>
+
+    <section>
+        <h2>1) Criando funções</h2>
+        <label for="n1">Número 1</label>
+        <input type="number" id="n1" value="10">
+        <label for="n2">Número 2</label>
+        <input type="number" id="n2" value="15">
+        <br><button id="btn-somar">Calcular</button>
+        <div class="saida" id="res-somar"></div>
+    </section>
+
+    <section>
+        <h2>2) addEventListener</h2>
+        <label for="nome-ev">Seu nome</label>
+        <input type="text" id="nome-ev" placeholder="Ex.: Julia">
+        <br><button id="btn-msg">Mostrar mensagem</button>
+        <div class="saida" id="res-msg"></div>
+    </section>
+
+    <section>
+        <h2>3e4) Média das notas (submit + classes CSS)</h2>
+        <form id="form-media" novalidate> <!-- novalidate: desliga a validação automática do navegador, para a NOSSA mensagem de erro aparecer -->
+            <label for="nota1">Nota 1</label>
+            <input type="number" id="nota1" step="0.1" min="0" max="10">
+            <label for="nota2">Nota 2</label>
+            <input type="number" id="nota2" step="0.1" min="0" max="10">
+            <br><button type="submit">Calcular</button>
+        </form>
+        <div class="saida" id="res-media"></div>
+    </section>
+
+    <section>
+        <h2>5) Arrays</h2>
+        <pre class="saida" id="saida-5"></pre>
+    </section>
+
+    <section>
+        <h2>6) Percorrendo Array com for</h2>
+        <pre class="saida" id="saida-6"></pre>
+    </section>
+
+    <section>
+        <h2>7) for...of</h2>
+        <pre class="saida" id="saida-7"></pre>
+    </section>
+
+    <section>
+        <h2>8) Array + DOM</h2>
+        <label for="aluno">Nome do aluno</label>
+        <input type="text" id="aluno">
+        <br><button id="btn-add-aluno">Adicionar</button>
+        <div class="saida" id="lista-alunos"></div>
+    </section>
+
+    <section>
+        <h2>9) Sistema de Compras</h2>
+        <form id="form-compras" novalidate>
+            <label for="produto">Nome do produto</label>
+            <input type="text" id="produto">
+            <label for="preco">Preço</label>
+            <input type="number" id="preco" step="0.01" min="0">
+            <label for="qtd">Quantidade</label>
+            <input type="number" id="qtd" min="1">
+            <br><button type="submit">Adicionar Produto!</button>
+        </form>
+        <div class="saida" id="erro-compras"></div>
+        <div id="lista-compras"></div>
+        <div id="qtd-compras"></div>
+    </section>
+</main>
+    <script src="JS/script.js"></script>
+</body>
+</html>

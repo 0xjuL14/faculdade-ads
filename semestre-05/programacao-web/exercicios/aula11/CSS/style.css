@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Exercício 4: o JavaScript só liga e desliga estas classes */
+.aprovado {
+    background-color: lightgreen;
+    color: darkgreen;
+    padding: 10px;
+    border: 2px solid green;
+}
+
+.recuperacao {
+    background-color: khaki;
+    color: #5c4a00;
+    padding: 10px;
+    border: 2px solid goldenrod;
+}
+
+.reprovado {
+    background-color: lightcoral;
+    color: darkred;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+.erro {
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    border: 2px dashed gray;
+}

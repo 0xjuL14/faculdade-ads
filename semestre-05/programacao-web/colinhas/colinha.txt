@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <title></title>
+    </head>
+     <body>
+            <header class="cabeçalho">
+            </header>
+                <main class="container">
+                </main>
+        <footer class="rodapé">Feito por Juh em 2026 </footer>
+    </body>
+</html>

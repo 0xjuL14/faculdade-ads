@@ -1,0 +1,57 @@
+.avatar {
+    width: 150px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.cabeçalho {
+    align-content: center;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* flexbox para colocar lado a lado */
+    gap: 40px; /* distancia lateral de um bloco para outro */
+}
+
+.conteudo {
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 70%;
+
+}
+
+.perfil {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 30%;
+}
+.rodapé {
+    align-content: flex-end;
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

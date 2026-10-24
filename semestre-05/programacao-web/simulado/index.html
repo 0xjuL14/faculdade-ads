@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JubsTech | Assistência Técnica</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container topo">
+      <p class="logo">JubsTech_ <span>Assistência Técnica</span></p>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#orcamento">Orçamento</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="banner">
+      <div class="container">
+        <h1>Seu notebook e seu celular de volta ao trabalho!</h1>
+        <p>
+          A JubsTech cuida de computadores, notebooks e celulares com
+          diagnóstico claro, preço combinado antes do conserto e garantia
+          em todos os serviços.
+        </p>
+        <a href="#orcamento" class="botao">Solicitar orçamento!</a>
+      </div>
+    </section>
+    <section id="servicos" class="container"> <!-- parte dos serviços -->
+      <h2>Nossos serviços</h2>
+      <div class="servicos-grid">
+        <article class="servico">
+          <h3>Formatação com Backup</h3>
+          <p>Reinstalação do sistema, drivers e programas básicos, com cópia dos seus arquivos.</p>
+          <p class="preco"><strong>R$ 120,00</strong> | prazo: 1 dia</p>
+        </article>
+        <article class="servico">
+          <h3>Troca de Tela</h3>
+          <p>Substituição de tela de notebook e de celular, com peça testada antes da entrega.</p>
+          <p class="preco"><strong>R$ 450,00</strong> | peça inclusa</p>
+        </article>
+        <article class="servico">
+          <h3>Limpeza Preventiva</h3>
+          <p>Limpeza interna, troca de pasta térmica e verificação de temperatura.</p>
+          <p class="preco"><strong>R$ 80,00</strong> | prazo: 1 dia</p>
+        </article>
+        <article class="servico">
+          <h3>Remoção de Vírus</h3>
+          <p>Varredura completa, remoção de ameaças e configuração de proteção.</p>
+          <p class="preco"><strong>R$ 90,00</strong> | garantia de 30 dias</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="orcamento" class="container">
+      <h2>Calcule seu orçamento!</h2>
+
+      <form id="form-orcamento" class="form-grid"> <!-- formulário -->
+        <div>
+          <label for="nome">Nome do cliente</label>
+          <input type="text" id="nome" name="nome" placeholder="ex: Maria Silva" minlength="3" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="ex: teste@email.com" required>
+        </div>
+        <div>
+          <label for="servico">Serviço desejado</label>
+          <select id="servico" name="servico" required>
+            <option value="">Selecione...</option>
+            <option value="Formatação com backup">Formatação com Backup</option>
+            <option value="Troca de tela">Troca de Tela</option>
+            <option value="Limpeza preventiva">Limpeza Preventiva</option>
+            <option value="Remoção de vírus">Remoção de Vírus</option>
+          </select>
+        </div>
+        <div>
+          <label for="quantidade">Quantidade de aparelhos</label>
+          <input type="number" id="quantidade" name="quantidade" placeholder="ex: 2" min="1" max="20" required>
+        </div>
+        <div>
+          <label for="valor">Valor do serviço (R$)</label>
+          <input type="number" id="valor" name="valor" placeholder="ex: 200" min="1" max="5000" step="0.01" required>
+        </div>
+        <div>
+          <label for="adicional">Opção adicional</label>
+          <select id="adicional" name="adicional" required>
+            <option value="0">Nenhuma (R$ 0,00)</option>
+            <option value="30">Busca e entrega (+ R$ 30,00)</option>
+            <option value="50">Atendimento urgente (+ R$ 50,00)</option>
+          </select>
+        </div>
+        <div class="campo-completo">
+          <button type="submit">Calcular orçamento!</button>
+        </div>
+      </form>
+
+      <div class="resultado"> <!-- atuação do js -->
+        <h3>Resultado</h3>
+        <p id="res-cliente">Preencha o formulário e clique em calcular.</p>
+        <p id="res-servico"></p>
+        <p id="res-calculo"></p>
+        <p id="res-adicional"></p>
+        <p id="res-subtotal"></p>
+        <p id="res-desconto"></p>
+        <p id="res-total" class="total"></p>
+        <p id="res-mensagem"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <p>JubsTech Assistência Técnica Especializada | Segunda a sexta, 13h às 18h</p>
+    <p>WhatsApp: (54) 90000-0000 | contato@jubstech.com</p>
+  </footer>
+
+  <script src="js/script.js" defer></script> <!-- chama o js -->
+</body>
+</html>

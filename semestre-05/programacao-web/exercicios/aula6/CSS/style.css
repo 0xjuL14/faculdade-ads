@@ -1,0 +1,207 @@
+/* Fonte usada no formulário */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
+
+
+/* Remove espaços padrão e facilita o cálculo dos tamanhos */
+* {
+    box-sizing: border-box;
+}
+
+
+/* Fundo e fonte da página */
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #e7edf8;
+    font-family: "JetBrains Mono", monospace;
+    background: #09111f;
+}
+
+
+/* Cabeçalho */
+.cabeçalho {
+    padding: 28px;
+    color: #00f5d4;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    background: #050a14;
+    border-bottom: 2px solid #00f5d4;
+}
+
+
+/* Centraliza o formulário */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+/* Esconde o texto "container" do seu HTML */
+.container {
+    display: none;
+}
+
+
+/* Cartão do formulário */
+form {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px;
+    background: #101b2e;
+    border: 1px solid #00f5d4;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0, 245, 212, 0.2);
+}
+
+
+/* Labels dos campos: Nome, E-mail, Telefone e Data */
+label:not(.opcao) {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #7df9ff;
+    font-weight: bold;
+}
+
+
+/* Campos de texto, seleção e textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    color: #e7edf8;
+    font: inherit;
+    background: #07101f;
+    border: 1px solid #47627f;
+    border-radius: 6px;
+}
+
+
+/* Destaque ao clicar em um campo */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00f5d4;
+    box-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+
+/* Espaço para a lista de áreas */
+select {
+    margin-top: 20px;
+}
+
+
+/* Caixa de texto maior */
+textarea {
+    min-height: 120px;
+    margin-top: 20px;
+    resize: vertical;
+}
+
+
+/*
+  Cada <label class="opcao"> contém um input e um texto.
+  display: block faz cada alternativa ocupar uma linha.
+  Como input e texto ficam dentro do mesmo label, eles ficam lado a lado.
+*/
+.opcao {
+    display: block;
+    margin-top: 12px;
+    color: #e7edf8;
+    cursor: pointer;
+}
+
+
+/* Cria um espaço maior antes da primeira opção de radio */
+.opcao:has(input[type="radio"]) {
+    margin-top: 20px;
+}
+
+/* Inputs de radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* Cor do radio marcado */
+input[type="radio"] {
+    accent-color: #ff2e88;
+}
+
+
+/* Cor do checkbox marcado */
+input[type="checkbox"] {
+    accent-color: #00f5d4;
+}
+
+
+/* Botões */
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    color: #061019;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    background: #00f5d4;
+    border: none;
+    border-radius: 6px;
+}
+
+
+/* Efeito simples ao passar o mouse */
+button:hover {
+    background: #7df9ff;
+}
+
+
+/* Botão de limpar */
+button[type="reset"] {
+    margin-top: 10px;
+    color: #ffffff;
+    background: #ff2e88;
+}
+
+
+button[type="reset"]:hover {
+    background: #ff5aa3;
+}
+
+
+/* Rodapé */
+.rodape {
+    padding: 18px;
+    color: #a8b4ca;
+    text-align: center;
+    background: #050a14;
+    border-top: 1px solid #47627f;
+}
+
+
+/* Ajuste em telas pequenas */
+@media (max-width: 600px) {
+    form {
+        padding: 22px;
+    }
+
+    .cabeçalho {
+        font-size: 1.3rem;
+    }
+}

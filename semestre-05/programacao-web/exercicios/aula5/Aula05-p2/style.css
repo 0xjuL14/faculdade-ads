@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    font-size: 20px;
+}
+h1{
+    font-size: 2rem;
+}
+
+.conteiner{
+    display: flex;
+    border: 4px solid rgb(73, 62, 118);
+}
+
+
+a{
+    border: 4px solid rgb(231, 52, 91);
+    margin: 5px;
+    color: aquamarine;
+    font-size: 1rem;
+}
+header{
+    border: 4px solid rgb(82, 0, 71);
+}
+.menu {
+    display: flex;
+    border: 4px solid rgb(69, 108, 10);
+    background-color: rgb(136, 136, 163);
+    color: wheat;
+    width: 70%;
+    transition: 2s;
+    padding: 10px;
+    text-align: center;
+    
+}
+@media (max-width: 700px) {
+    .menu { 
+        display: grid;
+        grid-template-areas: 
+        'a'
+        'a'
+        'a'
+        'a';
+        border: 4px solid rgb(167, 200, 117);
+        background-color: rgb(106, 106, 62);
+        color: black;
+        width: 90%;
+        transition: 2s;
+        text-align: center;
+    }
+}
+.mainIn{
+    background-color: azure;
+    border: 5%;
+    padding: 10px;
+}
+.imgp{
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    background-color: rgb(247, 213, 170);
+    transition: 2s;
+    img{
+        display: flex;
+        width: 45%;
+    }
+    p{
+        width: 45%;
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .imgp { 
+        display: block;
+        padding: 10px;
+        background-color: rgb(74, 22, 121);
+        color: whitesmoke;
+        transition: 2s;
+        margin: auto;
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        p{
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+html:
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/style.css"> <!-- chama o css -->
+        
+        <h1 id="titulo">Título original</h1>
+        <button id="botao">Alterar título</button>
+    </head>
+     <body>
+     <div class="layout">
+    <header class="cabecalho">Cabeçalho</header>
+    <nav class="menu">Menu</nav>
+    <main class="conteudo">Conteúdo principal</main>
+    <aside class="sidebar">Sidebar</aside>
+    <footer class="rodape">Rodapé</footer>
+    </div>
+        <footer class="rodapé"></footer>
+        <script src="script.js" defer></script> <!-- chama o javascript-->
+    </body>
+</html>
+
+
+
+css:
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-areas:
+    "header header header"
+    "menu conteudo sidebar"
+    "footer footer footer";
+  gap: 10px;
+  padding: 15px;
+  background-color: #e2e8f0;
+  border: 4px solid #334155;
+}
+
+.cabecalho {
+  grid-area: header;
+  padding: 30px;
+  background-color: #60a5fa;
+  border: 3px solid #1d4ed8;
+}
+
+.menu {
+  grid-area: menu;
+  padding: 30px;
+  background-color: #86efac;
+  border: 3px solid #16a34a;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  padding: 30px;
+  background-color: #fde68a;
+  border: 3px solid #d97706;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 30px;
+  background-color: #c4b5fd;
+  border: 3px solid #7e22ce;
+}
+
+.rodape {
+  grid-area: footer;
+  padding: 30px;
+  background-color: #fda4af;
+  border: 3px solid #e11d48;
+}
+
+
+javascript:
+
+
+
+document.querySelector("#titulo"); // # busca ID do elemento (único) | . busca pela classe do elemento (vários)
+botao.addEventListener("click", function() { alert("Botão clicado") }); // aciona um alerta 
+event.preventDefault(); // trava o recarregamento, captura os dados
+//titulo.textContent = "JavaScript alterou esta página!";

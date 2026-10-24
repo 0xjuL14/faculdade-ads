@@ -1,0 +1,185 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f5;
+    color: #333;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.destaque {
+    grid-column: span 2;
+    background-color: #eaf2ff;
+    border: 2px solid #1e5aa8;
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-top: 3px solid #1d4ed8;
+}
+
+
+form {
+    width: 100%;
+   
+    padding: 30px;
+    background: #101b2e;
+    border: 1px solid #00f5d4;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0, 245, 212, 0.2);
+}
+
+
+
+
+/* Campos de texto, seleção e textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    color: #e7edf8;
+    font: inherit;
+    background: #07101f;
+    border: 1px solid #47627f;
+    border-radius: 6px;
+}
+
+
+/* Destaque ao clicar em um campo */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00f5d4;
+    box-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+
+/* Espaço para a lista de áreas */
+select {
+    margin-top: 20px;
+}
+
+
+/* Caixa de texto maior */
+textarea {
+    min-height: 120px;
+    margin-top: 20px;
+    resize: vertical;
+}
+
+
+/*
+  Cada <label class="opcao"> contém um input e um texto.
+  display: block faz cada alternativa ocupar uma linha.
+  Como input e texto ficam dentro do mesmo label, eles ficam lado a lado.
+*/
+.opcao {
+    display: block;
+    margin-top: 12px;
+    color: #e7edf8;
+    cursor: pointer;
+}
+
+
+/* Cria um espaço maior antes da primeira opção de radio */
+.opcao:has(input[type="radio"]) {
+    margin-top: 20px;
+}
+
+/* Inputs de radio e checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+input[type="radio"] { /* Cor do radio marcado */
+    accent-color: #ff2e88;
+}
+
+input[type="checkbox"] { /* Cor do checkbox marcado */
+    accent-color: #00f5d4;
+}
+
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    color: #061019;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    background: #00f5d4;
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover { /* efeito ao passar o mouse */
+    background: #7df9ff;
+}
+
+button[type="reset"] { /* botão de limpar */
+    margin-top: 10px;
+    color: #ffffff;
+    background: #ff2e88;
+}
+
+button[type="reset"]:hover {
+    background: #ff5aa3;
+}
+

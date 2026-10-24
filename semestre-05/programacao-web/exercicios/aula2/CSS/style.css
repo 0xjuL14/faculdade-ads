@@ -1,0 +1,36 @@
+      
+h1 { /* tag */
+    color: rgb(9, 255, 0);
+}
+
+.perfil { /* classe */
+  max-width: 650px;
+  margin: auto;
+  background-color: rgba(34, 26, 44, 0.993);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+#body { /* id */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p {
+    color: rgb(223, 99, 185);
+}
+h3 {
+    color: rgb(99, 215, 223);
+}
+ul {
+    color: rgb(235, 235, 38);
+}
+img {
+    max-width: 650px;
+    margin: auto;
+}
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+a {
+    color:blueviolet
+}
