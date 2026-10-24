@@ -1,0 +1,20 @@
+# Executáveis e arquivos compilados
+*.exe
+*.o
+*.out
+*.class
+
+# IDEs
+.idea/
+*.iml
+cmake-build-*/
+out/
+
+# Python
+__pycache__/
+venv/
+.venv/
+
+# Sistema
+.DS_Store
+Thumbs.db
