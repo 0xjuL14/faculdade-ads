@@ -1,18 +1,29 @@
-# Meu Primeiro Repositório no GitHub ( • ̀ω•́ )✧
+# Faculdade ADS ( • ̀ω•́ )✧
 
-Oie!  Esse aqui é o meu primeiro repositório no GitHub e me alegra ver muito cada pull e commit que eu dou por mais bobinho que seja.
+Oie! Esse é o repositório onde eu guardo meus exercícios, resumos e anotações do curso de **Análise e Desenvolvimento de Sistemas**.
 
- **O que tem aqui?** 
-- Exercícios da disciplina de **Algoritmos e Programação II**  (Alguns dos arquivos estão com extensão `.cpp` porque eu estava usando o **Dev-C++** como ambiente, porém passei a usar o **CLion**!!). De qualquer forma, o foco é a **linguagem C** (não C++) >.<
-  
-- Commits meio bagunçados e (formatação também) porque eu ainda estou aprendendo
+Ele começou como o meu primeiro repositório no GitHub (só com exercícios de C) e foi crescendo junto comigo. Por isso o histórico de commits é meio bagunçado, e eu gosto de ter ele assim :')
 
-**Por que criei esse repositório?**
-- Para treinar e registrar minha evolução em programação.  
-- Para aprender a usar Git/GitHub na prática (e markdown também T_T)
-- Praticar C porque não se escreve céu sem C  
-- E claro… para ter orgulho de olhar pra trás e ver de onde comecei :')  
+## O que tem aqui
 
-Vou continuar atualizando esse espaço ao longo do semestre (e da vida) com novos exercícios e aprendizados.  
+| Semestre | Disciplina | Tecnologia | Conteúdo |
+|---|---|---|---|
+| 3º | [Algoritmos e Programação II](semestre-03/algoritmos-e-programacao-2-c) | C | Exercícios por tema (if/else, loops, funções, vetores, strings, enum/struct) e anotações |
+| 4º | [Estrutura de Dados](semestre-04/estruturas-de-dados) | C | Pilha, fila, lista, recursão e jogo da velha |
+| 5º | [Programação Orientada a Objetos](semestre-05/programacao-orientada-a-objetos-java) | Java | Exercícios das aulas (biblioteca, pacotes, interface gráfica com Swing, jogos, xadrez, zoológico) e resumo |
+| 5º | [Programação Web](semestre-05/programacao-web) | HTML, CSS, JavaScript | Exercícios aula a aula, simulado, colinhas e resumo |
+| 5º | [Banco de Dados](semestre-05/banco-de-dados) | SQL | Resumo para prova |
+| 5º | [Organização e Arquitetura de Computadores](semestre-05/organizacao-e-arquitetura-de-computadores) | Assembly | Resumo (os exercícios entram aqui conforme eu avançar na disciplina) |
+
+## Como rodar
+
+- **C:** `gcc arquivo.c -o programa` e depois `./programa` (para `.cpp`, use `g++`)
+- **Java:** as pastas são os `src/` de projetos feitos no IntelliJ IDEA
+- **Web:** abra o `index.html` de cada pasta no navegador
+
+## Observações
+
+- Alguns arquivos antigos de C estão com extensão `.cpp` porque eu usava o Dev-C++ antes de migrar para o CLion. O foco é a linguagem C.
+- Os resumos em Markdown (`resumo.md`) são anotações minhas de estudo.
 
 Obrigada por passar por aqui <3
