@@ -1,51 +1,43 @@
+
 // Ex. 4
 
+// Ex. 3BeC
+let alunos = [
+    {nome: 'Julia', nota: 10}, {nome: 'Ana', nota: 5}, {nome: 'Bruno', nota: 9}
+]
 
-// Ex. 3
+for (let aluno of alunos) {
+    console.log("Nome: " + aluno.nome + '   | Nota: ' + aluno.nota);
+}
 
-/*Atividade 3 – Objetos e JSON
-Objetivo: compreender como armazenar informações relacionadas em objetos e como transformá-las em JSON.
+const textoaluno = JSON.stringify(alunos);
+document.getElementById("aluno").innerHTML = textoaluno;
+console.log(textoaluno);
 
-Parte A – Criando objetos
-Crie um objeto chamado aluno contendo:
+const textoaluno2 = JSON.parse(textoaluno);
+console.log(textoaluno2);
+document.getElementById("aluno2").innerHTML = textoaluno2; // no console da certo mas no html n deu
+//typeof textoaluno = 'string'
+// typeof textoaluno2 = 'object'
 
-nome;
-idade;
-curso;
-nota.
-Depois realize as operações:
+// Qual a diferença entre objeto e array?
+// O que significa JSON?
+// Qual a função do JSON.stringify()? Transforma o JS em string/texto JSON
+// Qual a função do JSON.parse()? Transforma a string/texto JSON em JS novamente
+// JSON é a mesma coisa que banco de dados? Não, pois pode ser manipulado e adulterado, utilizado para estruturar, armazenar e trocar dados
 
-Mostre o nome no console.
-Mostre o curso.
-Altere a nota do aluno.
-Adicione uma propriedade chamada situacao.
-Mostre o objeto completo.
-Parte B – Array de objetos
-Crie um array chamado alunos contendo três objetos, cada um representando um aluno.
-
-Utilize for...of para apresentar o nome e a nota de cada aluno no console.
-
-Parte C – JSON
-Utilize JSON.stringify() para transformar o array de alunos em um texto JSON.
-
-Depois utilize JSON.parse() para transformar o texto novamente em dados JavaScript.
-
-Verificações obrigatórias:
-
-Mostrar o array original.
-Mostrar o texto JSON gerado.
-Mostrar o resultado de JSON.parse().
-Comparar os tipos utilizando typeof.
-Responda em comentários no código:
-
-Qual a diferença entre objeto e array?
-O que significa JSON?
-Qual a função do JSON.stringify()?
-Qual a função do JSON.parse()?
-JSON é a mesma coisa que banco de dados? */
-
-
-
+// Ex. 3A
+let aluno = {
+    nome: 'Julia',
+    idade: 20,
+    curso: 'ADS',
+    nota: 10,
+    situacao: 'aprovado'
+}
+// aluno.nome
+// aluno.curso
+// aluno.nota = 2; aluno.nota
+// aluno
 
 // Ex. 2
 function participante() {
