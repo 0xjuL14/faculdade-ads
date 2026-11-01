@@ -12,7 +12,7 @@ Ele começou como o meu primeiro repositório no GitHub (só com exercícios de 
 | 4º | [Estrutura de Dados](semestre-04/estruturas-de-dados) | C | Pilha, fila, lista, recursão e jogo da velha |
 | 5º | [Programação Orientada a Objetos](semestre-05/programacao-orientada-a-objetos-java) | Java | Exercícios das aulas (biblioteca, pacotes, interface gráfica com Swing, jogos, xadrez, zoológico) e resumo |
 | 5º | [Programação Web](semestre-05/programacao-web) | HTML, CSS, JavaScript | Exercícios aula a aula, simulado, colinhas e resumo |
-| 5º | [Banco de Dados](semestre-05/banco-de-dados) | SQL | Resumo para prova |
+| 5º | [Banco de Dados](semestre-05/banco-de-dados) | SQL | Resumos e exercícios em SQL |
 | 5º | [Organização e Arquitetura de Computadores](semestre-05/organizacao-e-arquitetura-de-computadores) | Assembly | Resumo (os exercícios entram aqui conforme eu avançar na disciplina) |
 
 ## Como rodar
