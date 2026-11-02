@@ -1,12 +1,78 @@
+/* Paleta (estimada da imagem) */
+:root {
+    --fundo: #0c0614;
+    --cartao: #160c25;
+    --borda: #2e1d4b;
+    --texto: #ece6fa;
+    --texto-suave: #a898c8;
+    --destaque: #b98bf5;
+    --destaque-hover: #d2b5fa;
+    --destaque-suave: #2a1747;
+}
+
 body {
     font-family: Arial, sans-serif;
     max-width: 700px;
     margin: 20px auto;
     padding: 0 16px;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+h1, h2 {
+    color: var(--texto);
 }
 
 section {
-    border: 1px solid #ccc;
+    background-color: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
     padding: 10px 20px;
     margin-bottom: 20px;
+}
+
+label {
+    color: var(--texto-suave);
+}
+
+input {
+    background-color: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 4px 0 10px;
+}
+
+input:focus {
+    outline: 2px solid var(--destaque);
+}
+
+button {
+    background-color: var(--destaque);
+    color: var(--fundo);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--borda);
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    color: var(--destaque);
 }
