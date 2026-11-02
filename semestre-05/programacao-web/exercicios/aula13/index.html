@@ -4,41 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-
     <title>Exercícios aula 13</title>
 </head>
 <body>
 <main>
-    <h1>Sistema de Cadastro de Alunos - incompleto minha cabeça dói</h1>
+    <h1>Sistema de Cadastro de Alunos</h1>
 
     <section>
         <h2>Cadastro de Alunos</h2>
         <form id="formulario">
             <label for="nomealuno">Informe o nome do aluno:</label><br>
-            <input type="text" id="nomealuno" name="nomealuno"><br>
-            <label for="nota1">Informe a 1ª nota:</label><br>
-            <input type="number" id="nota1" name="nota1"><br>
-            <label for="nota2">Informe a 2ª nota:</label><br>
-            <input type="number" id="nota2" name="nota2"><br>
-            <label for="frequencia">Informe a frequência (em %):</label><br>
-            <input type="number" id="frequencia" name="frequencia"><br>
-            <br><button id="cadastrar" type="button">Cadastrar aluno!</button>
-<!--            fazer validações básicas do HTML. campos devem ser obrigatórios.-->
-<!--            Digite o nome-->
-<!--            Nota 1 - 0 a 10-->
-<!--            Nota 2 - 0 a 10-->
-<!--            Frequência % - 0 a 100-->
-            <tr>
-                <td>teste</td>
-            </tr>
-            <br><div id="nomes" class="nomes"></div>
+            <input type="text" id="nomealuno" name="nomealuno" required><br>
 
+            <label for="nota1">Informe a 1ª nota:</label><br>
+            <input type="number" id="nota1" name="nota1" min="0" max="10" step="0.1" required><br>
+
+            <label for="nota2">Informe a 2ª nota:</label><br>
+            <input type="number" id="nota2" name="nota2" min="0" max="10" step="0.1" required><br>
+
+            <label for="frequencia">Informe a frequência (em %):</label><br>
+            <input type="number" id="frequencia" name="frequencia" min="0" max="100" required><br>
+
+            <br><button id="cadastrar" type="button">Cadastrar aluno!</button>
         </form>
     </section>
 
-
-
-
+    <section>
+        <h2>Alunos cadastrados</h2>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Frequência</th>
+                <th>Média</th>
+                <th>Situação</th>
+            </tr>
+            </thead>
+            <tbody id="lista"></tbody>
+        </table>
+    </section>
 </main>
 <script src="JS/script.js"></script>
 </body>
