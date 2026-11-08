@@ -25,6 +25,7 @@ function sairDaEdicao() {
     document.querySelector('#nota1').value = '';
     document.querySelector('#nota2').value = '';
     document.querySelector('#frequencia').value = '';
+    limparEndereco();
 }
 
 document.querySelector('#cadastrar').addEventListener('click', function() { // cadastramento
@@ -33,18 +34,6 @@ document.querySelector('#cadastrar').addEventListener('click', function() { // c
     let textoNota2 = document.querySelector('#nota2').value;
     let textoFreq = document.querySelector('#frequencia').value;
 
-    // A FAZER (MEU CEREBRO PIFOU JÁ):
-    // Colocar no HTML e fazer a parte do cep:
-    // Buscar CEP. Adicione os campos CEP, rua, número, complemento, bairro, cidade e UF.
-    // Crie um botão Buscar CEP e use fetch com async/await para consultar o ViaCEP.
-    // Preencha rua, bairro, cidade e UF com a resposta. Número e complemento devem ser preenchidos manualmente.
-
-    // Validar e avisar. Trate o CEP como texto, retire a formatação e confira se restam oito dígitos antes de consultar.
-    // Mostre uma mensagem para CEP inválido, CEP não encontrado e falha na consulta. Use try/catch e avise quando estiver consultando.
-    // Salvar e recuperar. Ao salvar o aluno, atualize a lista e o localStorage, incluindo o endereço.
-    // A busca do CEP apenas preenche o formulário; ela não salva o aluno.
-    // Cadastros antigos sem endereço também devem continuar funcionando.
-    // Exemplo de consulta: https://viacep.com.br/ws/01001000/json/
 
     // algumas validações porque é muita coisa pra pensar:
     if (nome === '') {
@@ -95,7 +84,16 @@ document.querySelector('#cadastrar').addEventListener('click', function() { // c
         nota2: nota2,
         frequencia: frequencia,
         media: media,
-        situacao: situacao
+        situacao: situacao,
+        endereco: {
+            cep: document.querySelector('#cep').value.replace(/\D/g, ''),
+            rua: document.querySelector('#rua').value.trim(),
+            numero: document.querySelector('#numero').value.trim(),
+            complemento: document.querySelector('#complemento').value.trim(),
+            bairro: document.querySelector('#bairro').value.trim(),
+            cidade: document.querySelector('#cidade').value.trim(),
+            uf: document.querySelector('#uf').value.trim().toUpperCase()
+        }
     };
 
     if (indiceEdicao !== null) {
@@ -115,12 +113,19 @@ function mostrarnoHTML() {
     for (let aluno of alunos) {
         let tr = document.createElement('tr');
 
+        let end = aluno.endereco || {}; // aluno antigo não tem endereço
+        let textoEnd = '—';
+        if (end.rua) {
+            textoEnd = end.rua + ', ' + end.numero + ' ' + end.complemento + ' - ' + end.bairro + ', ' + end.cidade + '/' + end.uf;
+        }
+
         tr.innerHTML = `<td>${aluno.nome}</td>
                         <td>${aluno.nota1}</td>
                         <td>${aluno.nota2}</td>
                         <td>${aluno.frequencia}%</td>
                         <td>${aluno.media}</td>
                         <td>${aluno.situacao}</td>
+                        <td>${textoEnd}</td>
                         <td><button class="editar">Editar</button> <button class="excluir">Excluir</button> </td>`
 
         // var aluno2 = aluno; -> eu imbecil idiota tinha deixado var e por isso não excluia qual eu queria :D
@@ -132,6 +137,15 @@ function mostrarnoHTML() {
             document.querySelector('#nota1').value = aluno2.nota1;
             document.querySelector('#nota2').value = aluno2.nota2;
             document.querySelector('#frequencia').value = aluno2.frequencia;
+
+            let e = aluno2.endereco || {};
+            document.querySelector('#cep').value = e.cep || '';
+            document.querySelector('#rua').value = e.rua || '';
+            document.querySelector('#numero').value = e.numero || '';
+            document.querySelector('#complemento').value = e.complemento || '';
+            document.querySelector('#bairro').value = e.bairro || '';
+            document.querySelector('#cidade').value = e.cidade || '';
+            document.querySelector('#uf').value = e.uf || '';
 
 
             document.querySelector('#cadastrar').textContent = 'Salvar'; // muda salvar > cancelar
@@ -146,10 +160,7 @@ function mostrarnoHTML() {
             mostrarnoHTML()
         })
 
-
         console.log(lista,tr);
-        ;
-
         lista.appendChild(tr);
     }
 }
@@ -159,7 +170,6 @@ mostrarnoHTML();
 function salvarLocal(dados){
     let dadosString = JSON.stringify(dados);
     localStorage.setItem('alunos',dadosString)
-
 }
 
 function lerLocal(){
@@ -167,10 +177,56 @@ function lerLocal(){
     if(dados == null) // se foi salvo, converte o texto de volta para lista com JSON.parse
         return []
     return JSON.parse(dados);
-
 }
 
+async function buscarCep() { // busca de CEP
+    let cep = document.querySelector('#cep').value.replace(/\D/g, ''); // tira o que n é nº
+    let mensagem = document.querySelector('#mensagemcep');
+    let botao = document.querySelector('#buscarcep');
 
+    if (cep.length !== 8) {
+        mensagem.textContent = 'CEP inválido!! Digite 8 números.';
+        return;
+    }
+
+    mensagem.textContent = 'Consultando CEP...';
+    botao.disabled = true;
+
+    try {
+        let resposta = await fetch('https://viacep.com.br/ws/' + cep + '/json/');
+        if (!resposta.ok) {
+            throw new Error('Erro HTTP ' + resposta.status);
+        }
+        let dados = await resposta.json();
+
+        if (dados.erro) {
+            mensagem.textContent = 'CEP não encontrado.';
+            return;
+        }
+        document.querySelector('#rua').value = dados.logradouro;
+        document.querySelector('#bairro').value = dados.bairro;
+        document.querySelector('#cidade').value = dados.localidade;
+        document.querySelector('#uf').value = dados.uf;
+        mensagem.textContent = 'Endereço preenchido! Informe o número e o complemento.';
+    } catch (erro) {
+        mensagem.textContent = 'Falha na consulta. Verifique a conexão!';
+    } finally {
+        botao.disabled = false;
+    }
+}
+
+document.querySelector('#buscarcep').addEventListener('click', buscarCep);
+
+function limparEndereco() {
+    document.querySelector('#cep').value = '';
+    document.querySelector('#rua').value = '';
+    document.querySelector('#numero').value = '';
+    document.querySelector('#complemento').value = '';
+    document.querySelector('#bairro').value = '';
+    document.querySelector('#cidade').value = '';
+    document.querySelector('#uf').value = '';
+    document.querySelector('#mensagemcep').textContent = '';
+}
 
 
 
