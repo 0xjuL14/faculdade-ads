@@ -1,4 +1,4 @@
-/* Paleta (estimada da imagem) */
+/* Paleta de cores da Juh */
 :root {
     --fundo: #0c0614;
     --cartao: #160c25;
@@ -12,7 +12,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    max-width: 700px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 0 16px;
     background-color: var(--fundo);
@@ -69,10 +69,33 @@ table {
 
 th, td {
     border: 1px solid var(--borda);
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
 th {
     color: var(--destaque);
+}
+
+h3 {
+    color: var(--destaque);
+    margin: 16px 0 6px;
+}
+
+.linha {
+    display: flex;
+    flex-wrap: wrap;   /* no celular os campos descem para a linha de baixo */
+    gap: 0 20px;
+}
+
+#cep        { width: 100px; }
+#rua        { width: 300px; }
+#numero     { width: 40px; }
+#complemento{ width: 100px; }
+#bairro     { width: 200px; }
+#cidade     { width: 220px; }
+#uf         { width: 40px; }
+
+input {
+    max-width: 100%;   /* não estoura a tela no celular */
 }
