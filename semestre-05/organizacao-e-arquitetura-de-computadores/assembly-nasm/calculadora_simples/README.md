@@ -12,15 +12,15 @@ Projeto integrador (Q8) da atividade prática de **Organização e Arquitetura d
 
 ## Sumário
 
-- [Requisitos do exercício](#-requisitos-do-exercício)
-- [Saída do programa](#-saída-do-programa)
-- [Como compilar e executar](#-como-compilar-e-executar)
-- [Como o programa funciona](#-como-o-programa-funciona)
-- [Explicação de cada operação](#-explicação-de-cada-operação)
-- [Como o número aparece na tela](#-como-o-número-aparece-na-tela)
-- [Registradores utilizados](#-registradores-utilizados)
-- [Limitações](#-limitações)
-- [Conceitos praticados](#-conceitos-praticados)
+- [Requisitos do exercício](#requisitos-do-exercício)
+- [Saída do programa](#saída-do-programa)
+- [Como compilar e executar](#como-compilar-e-executar)
+- [Como o programa funciona](#como-o-programa-funciona)
+- [Explicação de cada operação](#explicação-de-cada-operação)
+- [Como o número aparece na tela](#como-o-número-aparece-na-tela)
+- [Registradores utilizados](#registradores-utilizados)
+- [Limitações](#limitações)
+- [Conceitos praticados](#conceitos-praticados)
 
 ---
 
@@ -48,7 +48,7 @@ Divisao (DIV):       004
 Resto (DIV):         000
 ```
 
-> Os resultados sempre aparecem com **3 dígitos** (por isso o `025`). Veja em [Limitações](#-limitações).
+> Os resultados sempre aparecem com **3 dígitos** (por isso o `025`). Veja em [Limitações](#limitações).
 
 ---
 
